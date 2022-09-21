@@ -1,4 +1,45 @@
+:root {
+  --main-font: 'Poppins', sans-serif;
+  --primary-color: #6070FF;
+  --secondary-color: #172B4D;
+  --tertiary-color: #344563;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+.container-v {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-h {
+  display: flex;
+  flex-direction: row;
+}
+
+.simple-button {
+  background: none;
+  border: none;
+}
+
+.app-bar {
+  position: fixed;
+  top: 44px;
+  width: 100vw;
+  padding: 0 7%;
+  justify-content: space-between;
+}
+
+.app-bar h2 {
+  font-family: var(--main-font);
+  color: var(--primary-color);
+}
+
+.app-headline {
+  position: absolute;
+  top: 92px;
 }

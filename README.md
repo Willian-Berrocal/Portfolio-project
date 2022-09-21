@@ -2,13 +2,16 @@
 
 # Hello Microverse
 
-> (instrucciones ...)
-> 
+> Parsed a Figma design to create a web design.
+> Used Flexbox in order to make the layout of the page.
+> Header of the webpage done.
+> Headline section of the webpage done.
 
 
 ## Built With
 
-- (HTML & CSS ...)
+- HTML
+- CSS
 
 
 ## Getting Started
