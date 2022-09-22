@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Hello Microverse
+# Portfolio project
 
 > Parsed a Figma design to create a web design.
 > Used Flexbox in order to make the layout of the page.
