@@ -48,10 +48,12 @@ body {
   align-items: center;
 }
 
-.app-bar h2 {
+.app-bar .logo {
   font-family: var(--main-font);
+  font-weight: 700;
   color: var(--primary-color);
   font-size: 18px;
+  text-decoration: none;
 }
 
 .app-bar button {
@@ -60,14 +62,16 @@ body {
 
 .app-headline {
   background-color: #fff;
-  border-bottom-left-radius: 20%;
+  border-bottom-left-radius: 100px;
   position: absolute;
   top: 12.8vh;
   width: 100vw;
-  height: 87.2vh;
+  min-height: 87.2vh;
   padding: 15.9vh var(--left-right-padding);
   gap: 12px;
   background-image: url(images/header-shapes\ mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .app-headline h1 {
@@ -83,7 +87,9 @@ body {
   color: #7f8cff;
 }
 
-.app-headline div.media-links {
+.app-headline .media-links {
   width: 170px;
   justify-content: space-between;
+  list-style: none;
+  align-items: center;
 }
