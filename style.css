@@ -1,8 +1,9 @@
 :root {
   --main-font: 'Poppins', sans-serif;
-  --primary-color: #6070FF;
-  --secondary-color: #172B4D;
+  --primary-color: #6070ff;
+  --secondary-color: #172b4d;
   --tertiary-color: #344563;
+  --left-right-padding: 6.4vw;
 }
 
 * {
@@ -26,20 +27,63 @@
   border: none;
 }
 
+.simple-text {
+  font-family: var(--main-font);
+  color: var(--tertiary-color);
+  font-size: 1rem;
+}
+
+body {
+  background-color: #f7f7f9;
+}
+
 .app-bar {
+  background-color: #fff;
   position: fixed;
-  top: 44px;
+  top: 6vh;
   width: 100vw;
-  padding: 0 7%;
+  height: 6.8vh;
+  padding: 0 var(--left-right-padding);
   justify-content: space-between;
+  align-items: center;
 }
 
 .app-bar h2 {
   font-family: var(--main-font);
   color: var(--primary-color);
+  font-size: 18px;
+}
+
+.app-bar button {
+  padding: 8px;
 }
 
 .app-headline {
+  background-color: #fff;
+  border-bottom-left-radius: 20%;
   position: absolute;
-  top: 92px;
+  top: 12.8vh;
+  width: 100vw;
+  height: 87.2vh;
+  padding: 15.9vh var(--left-right-padding);
+  gap: 12px;
+  background-image: url(images/header-shapes\ mobile.svg);
+}
+
+.app-headline h1 {
+  font-family: var(--main-font);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--secondary-color);
+}
+
+.app-headline span.social-media {
+  font-family: var(--main-font);
+  color: #7f8cff;
+}
+
+.app-headline div.media-links {
+  width: 170px;
+  justify-content: space-between;
 }
