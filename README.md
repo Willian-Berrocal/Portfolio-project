@@ -6,7 +6,8 @@
 > Used Flexbox in order to make the layout of the page.
 > Header of the webpage done.
 > Headline section of the webpage done.
-> Improved UX to be responsive for mobile sizes
+> Improved UX to be responsive for mobile sizes.
+> Used Grid to make the layout of a section.
 
 
 ## Built With

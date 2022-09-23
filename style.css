@@ -1,8 +1,12 @@
+/* ----------- GENERAL ----------- */
+
 :root {
   --main-font: 'Poppins', sans-serif;
-  --primary-color: #6070ff;
-  --secondary-color: #172b4d;
-  --tertiary-color: #344563;
+  --primary-color: #6070ff;                 /* For logo */
+  --secondary-color: #172b4d;               /* For titles */
+  --tertiary-color: #344563;                /* For simple-text */
+  --softer-text-color: #7a869a;             /* For role and year */
+  --primary-bg: #fff;                    /* For sections */
   --left-right-padding: 6.4vw;
 }
 
@@ -11,6 +15,8 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ----------- GENERIC CLASSES ----------- */
 
 .container-v {
   display: flex;
@@ -23,25 +29,64 @@
 }
 
 .simple-button {
+  padding: 8px;
   background: none;
   border: none;
+  cursor: pointer;
+}
+
+.complex-button {
+  padding: 12px;
+  width: fit-content;
+  color: #6070ff;
+  background-color: #fff;
+  border: 1px solid #7f8cff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.complex-button:hover {
+  background-color: #6070ff;
+  color: #fff;
+}
+
+.complex-button:active {
+  background-color: #2230d2;
+}
+
+.complex-button:disabled {
+  color: #5e6c84;
+  border: 1px solid #c1c7d0;
 }
 
 .simple-text {
-  font-family: var(--main-font);
   color: var(--tertiary-color);
   font-size: 1rem;
 }
 
-body {
-  background-color: #f7f7f9;
+.big-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--secondary-color);
 }
 
-.app-bar {
-  background-color: #fff;
-  position: fixed;
-  top: 6vh;
+/* ----------- BODY ----------- */
+
+body {
+  background-color: #f7f7f9;
+  font-family: var(--main-font);
   width: 100vw;
+}
+
+/* ----------- APP-BAR ----------- */
+
+.app-bar {
+  background-color: var(--primary-bg);
   height: 6.8vh;
   padding: 0 var(--left-right-padding);
   justify-content: space-between;
@@ -49,23 +94,17 @@ body {
 }
 
 .app-bar .logo {
-  font-family: var(--main-font);
   font-weight: 700;
   color: var(--primary-color);
   font-size: 18px;
   text-decoration: none;
 }
 
-.app-bar button {
-  padding: 8px;
-}
+/* ----------- APP-HEADLINE ----------- */
 
 .app-headline {
-  background-color: #fff;
+  background-color: var(--primary-bg);
   border-bottom-left-radius: 100px;
-  position: absolute;
-  top: 12.8vh;
-  width: 100vw;
   min-height: 87.2vh;
   padding: 15.9vh var(--left-right-padding);
   gap: 12px;
@@ -74,22 +113,143 @@ body {
   background-size: cover;
 }
 
-.app-headline h1 {
-  font-family: var(--main-font);
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  color: var(--secondary-color);
-}
-
-.app-headline span.social-media {
-  font-family: var(--main-font);
+span.social-media {
   color: #7f8cff;
+  font-weight: 500;
 }
 
-.app-headline .media-links {
+ul.media-links {
   width: 170px;
   justify-content: space-between;
   list-style: none;
   align-items: center;
+}
+
+/* ----------- APP-WORKS ----------- */
+
+.app-works {
+  padding: 15.9vh var(--left-right-padding);
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  row-gap: 12.2vh;
+  justify-content: center;
+}
+
+.app-works .project-card {
+  background-color: var(--primary-bg);
+  border: 1px solid #dfe1e6;
+  border-radius: 16px;
+  padding: 16px;
+  gap: 12px;
+}
+
+.app-works .project-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: var(--secondary-color);
+}
+
+.app-works div.details {
+  align-items: center;
+}
+
+.app-works .client {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--tertiary-color);
+}
+
+.app-works .dot-figure {
+  width: 8px;
+  height: 8px;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.app-works .role,
+.app-works .year {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  color: var(--softer-text-color);
+}
+
+.app-works .project-card ul {
+  width: 203px;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-works .project-card li {
+  color: var(--primary-color);
+  background-color: #ebebff;
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.app-works .project-card > button {
+  margin: 12px 0;
+}
+
+/* ----------- APP-ABOUT-ME ----------- */
+
+.app-about-me {
+  background-color: var(--primary-bg);
+  border-top-right-radius: 100px;
+  padding: 15.9vh var(--left-right-padding);
+  gap: 12px;
+}
+
+.app-about-me .categories-list {
+  margin-top: 12px;
+  list-style: none;
+}
+
+.app-about-me .categories-list > li {
+  padding: 0 12px;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.app-about-me .categories-list > li > div {
+  padding: 16px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-about-me .categories-list h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.app-about-me .categories-list > li > div > button > img {
+  height: 24px;
+  width: 24px;
+}
+
+.app-about-me li.categorie-open {
+  border-bottom: none;
+}
+
+.app-about-me li.categorie-open button {
+  rotate: 90deg;
+}
+
+.app-about-me .open-list > li {
+  padding: 9px 12px;
+  margin: 12px 0;
+  background-color: #f7f7f9;
+  align-items: center;
+}
+
+.app-about-me .open-list span {
+  margin-left: 16px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
 }
