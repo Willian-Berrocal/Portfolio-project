@@ -29,12 +29,15 @@
 }
 
 .simple-button {
+  padding: 8px;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .complex-button {
   padding: 12px;
+  width: fit-content;
   color: #6070ff;
   background-color: #fff;
   border: 1px solid #7f8cff;
@@ -43,6 +46,7 @@
   font-size: 17px;
   line-height: 24px;
   transition: 300ms;
+  cursor: pointer;
 }
 
 .complex-button:hover {
@@ -62,6 +66,13 @@
 .simple-text {
   color: var(--tertiary-color);
   font-size: 1rem;
+}
+
+.big-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--secondary-color);
 }
 
 /* ----------- BODY ----------- */
@@ -93,10 +104,6 @@ body {
   text-decoration: none;
 }
 
-.app-bar button {
-  padding: 8px;
-}
-
 /* ----------- APP-HEADLINE ----------- */
 
 .app-headline {
@@ -110,19 +117,12 @@ body {
   background-size: cover;
 }
 
-.app-headline h1 {
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  color: var(--secondary-color);
-}
-
-.app-headline span.social-media {
+span.social-media {
   color: #7f8cff;
   font-weight: 500;
 }
 
-.app-headline .media-links {
+ul.media-links {
   width: 170px;
   justify-content: space-between;
   list-style: none;
@@ -180,14 +180,14 @@ body {
   color: var(--softer-text-color);
 }
 
-.app-works ul {
+.app-works .project-card ul {
   width: 203px;
   list-style: none;
   align-items: center;
   justify-content: space-between;
 }
 
-.app-works li {
+.app-works .project-card li {
   color: var(--primary-color);
   background-color: #ebebff;
   border-radius: 8px;
@@ -197,6 +197,63 @@ body {
   line-height: 16px;
 }
 
-.app-works button {
+.app-works .project-card > button {
   margin: 12px 0;
+}
+
+/* ----------- APP-ABOUT-ME ----------- */
+
+.app-about-me {
+  background-color: var(--primary-bg);
+  border-top-right-radius: 100px;
+  padding: 15.9vh var(--left-right-padding);
+  gap: 12px;
+}
+
+.app-about-me .categories-list {
+  margin-top: 12px;
+  list-style: none;
+}
+
+.app-about-me .categories-list > li {
+  padding: 0 12px;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.app-about-me .categories-list > li > div {
+  padding: 16px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-about-me .categories-list h3 {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.app-about-me .categories-list > li > div > button > img {
+  height: 24px;
+  width: 24px;
+}
+
+.app-about-me li.categorie-open {
+  border-bottom: none;
+}
+
+.app-about-me li.categorie-open button {
+  rotate: 90deg;
+}
+
+.app-about-me .open-list > li {
+  padding: 9px 12px;
+  margin: 12px 0;
+  background-color: #f7f7f9;
+  align-items: center;
+}
+
+.app-about-me .open-list span {
+  margin-left: 16px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
 }
