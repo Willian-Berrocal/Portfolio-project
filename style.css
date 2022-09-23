@@ -85,10 +85,6 @@ body {
 
 /* ----------- APP-BAR ----------- */
 
-.blank {
-  height: 6vh;
-}
-
 .app-bar {
   background-color: var(--primary-bg);
   height: 6.8vh;
