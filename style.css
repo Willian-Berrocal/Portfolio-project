@@ -75,6 +75,19 @@
   color: var(--secondary-color);
 }
 
+.simple-input {
+  background-color: white;
+  border-style: none;
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 17px;
+}
+
+.simple-input::placeholder {
+  font-family: var(--main-font);
+}
+
 /* ----------- BODY ----------- */
 
 body {
@@ -284,40 +297,10 @@ ul.media-links {
   margin-bottom: 50px;
 }
 
-.app-contact ul {
+.app-contact form {
   gap: 20px;
 }
 
-.app-contact li {
-  list-style: none;
-}
-
-.app-contact li>input {
-  background-color: white;
-  border-style: none;
-  width: 100%;
-  border-radius: 8px;
-  padding: 15px;
-  font-size: 17px;
-}
-
-.app-contact li>textarea {
-  background-color: white;
-  border-style: none;
-  width: 100%;
-  border-radius: 8px;
-  padding: 15px;
-  font-size: 17px;
-}
-
-.app-contact li>input::placeholder {
-  font-family: var(--main-font);
-}
-
-.app-contact li>textarea::placeholder {
-  font-family: var(--main-font);
-}
-
-.app-contact button {
+.app-contact .contact-button {
   padding: 12px 16px;
 }
