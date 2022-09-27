@@ -253,3 +253,71 @@ ul.media-links {
   font-size: 15px;
   line-height: 20px;
 }
+
+/* ----------- APP-CONTACT ----------- */
+
+.app-contact {
+  background-color: var(--primary-color);
+  border-top-left-radius: 80px;
+  padding: 103px var(--left-right-padding) 8px var(--left-right-padding);
+  justify-content: center;
+  gap: 12px;
+  background-image: url(images/background2/contact\ form\ shapes-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: top 21px right -20px;
+}
+
+.app-contact h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  text-align: center;
+}
+
+.app-contact p {
+  color: white;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.app-contact ul {
+  gap: 20px;
+}
+
+.app-contact li {
+  list-style: none;
+}
+
+.app-contact li>input {
+  background-color: white;
+  border-style: none;
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 17px;
+}
+
+.app-contact li>textarea {
+  background-color: white;
+  border-style: none;
+  width: 100%;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 17px;
+}
+
+.app-contact li>input::placeholder {
+  font-family: var(--main-font);
+}
+
+.app-contact li>textarea::placeholder {
+  font-family: var(--main-font);
+}
+
+.app-contact button {
+  padding: 12px 16px;
+}
