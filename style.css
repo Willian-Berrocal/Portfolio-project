@@ -372,6 +372,7 @@ ul.media-links {
   /* ----------- DESK-APP-WORKS ----------- */
 
   .app-works {
+    justify-content: stretch;
     padding: 15.7vh 9.8vw;
     row-gap: 15.7vh;
   }
@@ -384,7 +385,6 @@ ul.media-links {
 
   .app-works .project-card .snapshoot {
     width: 50%;
-    height: 100%;
   }
 
   .app-works .card-details {
@@ -401,6 +401,10 @@ ul.media-links {
     transition: 500ms;
     border: 2px solid #a7aeff;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+  }
+
+  .app-works .project-title br {
+    display: none;
   }
 
   /* ----------- DESK-APP-ABOUT-ME ----------- */
@@ -462,5 +466,43 @@ ul.media-links {
 
   .app-contact img {
     display: none;
+  }
+
+  @media (width <= 1212px) {
+    .app-works {
+      padding: 10vh 7vw;
+      row-gap: 10vh;
+      scale: 0.95;
+    }
+
+    .app-works .project-card {
+      padding: 18px;
+      gap: 0;
+    }
+
+    .app-works .project-card .snapshoot {
+      width: 55%;
+    }
+
+    .app-works .card-details {
+      gap: 12px;
+      padding: 24px;
+    }
+  }
+
+  @media (width <= 986px) {
+    .app-works {
+      padding: 0;
+      row-gap: 9vh;
+      scale: 0.9;
+    }
+
+    .app-works .project-card {
+      padding: 12px;
+    }
+
+    .app-works .card-details {
+      padding: 12px 24px;
+    }
   }
 }
