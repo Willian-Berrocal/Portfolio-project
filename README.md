@@ -8,6 +8,8 @@
 > Headline section of the webpage done.
 > Improved UX to be responsive for mobile sizes.
 > Used Grid to make the layout of a section.
+> Implemented a new layout for desktop version
+> Added querys to make the page responsive
 
 
 ## Built With
