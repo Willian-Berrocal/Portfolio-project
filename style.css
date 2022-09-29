@@ -6,7 +6,7 @@
   --secondary-color: #172b4d;               /* For titles */
   --tertiary-color: #344563;                /* For simple-text */
   --softer-text-color: #7a869a;             /* For role and year */
-  --primary-bg: #fff;                    /* For sections */
+  --primary-bg: #fff;                       /* For sections */
   --left-right-padding: 6.4vw;
 }
 
@@ -26,6 +26,7 @@
 .container-h {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .simple-button {
@@ -116,6 +117,24 @@ body {
   text-decoration: none;
 }
 
+.app-bar nav {
+  display: none;
+}
+
+.app-bar nav ul {
+  list-style: none;
+  gap: 8px;
+}
+
+.app-bar nav a {
+  text-decoration: none;
+  padding: 10px 12px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--tertiary-color);
+}
+
 /* ----------- APP-HEADLINE ----------- */
 
 .app-headline {
@@ -152,10 +171,16 @@ ul.media-links {
 }
 
 .app-works .project-card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--primary-bg);
   border: 1px solid #dfe1e6;
   border-radius: 16px;
   padding: 16px;
+  gap: 12px;
+}
+
+.app-works .card-details {
   gap: 12px;
 }
 
@@ -164,10 +189,6 @@ ul.media-links {
   font-size: 32px;
   line-height: 44px;
   color: var(--secondary-color);
-}
-
-.app-works div.details {
-  align-items: center;
 }
 
 .app-works .client {
@@ -195,7 +216,6 @@ ul.media-links {
 .app-works .project-card ul {
   width: 203px;
   list-style: none;
-  align-items: center;
   justify-content: space-between;
 }
 
@@ -209,21 +229,26 @@ ul.media-links {
   line-height: 16px;
 }
 
-.app-works .project-card > button {
+.app-works .project-card button {
   margin: 12px 0;
 }
 
 /* ----------- APP-ABOUT-ME ----------- */
 
 .app-about-me {
+  display: flex;
+  flex-direction: column;
   background-color: var(--primary-bg);
   border-top-right-radius: 100px;
   padding: 15.9vh var(--left-right-padding);
+  gap: 24px;
+}
+
+.app-about-me div.about-myself {
   gap: 12px;
 }
 
 .app-about-me .categories-list {
-  margin-top: 12px;
   list-style: none;
 }
 
@@ -243,11 +268,6 @@ ul.media-links {
   font-size: 20px;
 }
 
-.app-about-me .categories-list > li > div > button > img {
-  height: 24px;
-  width: 24px;
-}
-
 .app-about-me li.categorie-open {
   border-bottom: none;
 }
@@ -256,21 +276,33 @@ ul.media-links {
   rotate: 90deg;
 }
 
-.app-about-me .open-list > li {
+.app-about-me .open-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.app-about-me .open-list li {
+  display: flex;
   padding: 9px 12px;
-  margin: 12px 0;
   background-color: #f7f7f9;
   align-items: center;
+  border-radius: 8px;
+  gap: 16px;
 }
 
 .app-about-me .open-list span {
-  margin-left: 16px;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
 }
 
 /* ----------- APP-CONTACT ----------- */
+
+.footer-background {
+  background-color: var(--primary-bg);
+}
 
 .app-contact {
   background-color: var(--primary-color);
@@ -306,4 +338,100 @@ ul.media-links {
 
 .app-contact .contact-button {
   padding: 12px 16px;
+}
+
+@media (768px <= width) {
+  /* ----------- DESK-APP-BAR ----------- */
+
+  .app-bar {
+    padding: 26px 10vw;
+  }
+  
+  .app-bar button {
+    display: none;
+  }
+
+  .app-bar nav {
+    display: inline-block;
+  }
+
+  /* ----------- DESK-APP-HEADLINE ----------- */
+
+  .app-headline {
+    background-image: url(images/desktop\ Header\ bg.svg);
+    background-repeat: no-repeat;
+    background-size: 97%;
+    background-position: top 30px right 10px;
+    padding: 32vh 18vw 28vh 18vw;
+  }
+
+  .app-headline p {
+    font-size: 20px;
+  }
+
+  /* ----------- DESK-APP-WORKS ----------- */
+
+  .app-works {
+    padding: 15.7vh 9.8vw;
+    row-gap: 15.7vh;
+  }
+
+  .app-works .project-card {
+    flex-direction: row;
+    padding: 24px;
+    gap: 22px;
+  }
+
+  .app-works .project-card .snapshoot {
+    width: 50%;
+    height: 100%;
+  }
+
+  .app-works .card-details {
+    width: 50%;
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .even-card {
+    order: 1;
+  }
+
+  .app-works .project-card:hover {
+    transition: 500ms;
+    border: 2px solid #A7AEFF;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ----------- DESK-APP-ABOUT-ME ----------- */
+
+  .app-about-me {
+    flex-direction: row;
+    padding: 15.7vh 9.8vw;
+  }
+
+  .app-about-me div.about-myself {
+    width: 40%;
+  }
+
+  .app-about-me .categories-list {
+    width: 60%;
+  }
+
+  .app-about-me .categories-list > li {
+    padding: 0 24px;
+  }
+
+  .app-about-me .open-list {
+    flex-direction: row;
+  }
+
+  .app-about-me .open-list li {
+    flex-direction: column;
+    flex-basis: 20%;
+    padding: 12px 12px 20px 12px;
+    align-items: flex-start;
+  }
+
+  /* ----------- DESK-APP-CONTACT ----------- */
 }
