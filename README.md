@@ -24,7 +24,7 @@ Clone this repository and open it in your browser.
 
 ### Deployment
 
-https://willian-berrocal.github.io/Portfolio-project/#Contact
+https://willian-berrocal.github.io/Portfolio-project/
 
 
 ## Authors
