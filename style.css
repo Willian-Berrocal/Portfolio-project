@@ -106,7 +106,7 @@ body {
   background-color: hsla(234, 100%, 69%, 80%);
   backdrop-filter: blur(8px);
   position: fixed;
-  padding: 12px 12px;
+  padding: 12px;
   height: 100vh;
   width: 100vw;
 }

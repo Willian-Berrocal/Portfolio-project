@@ -6,10 +6,7 @@ function hideMenu() {
   document.querySelector('.app-menu').classList.replace('menu-show', 'menu-hide');
 }
 
-closeButton[0].addEventListener('click', hideMenu);
-closeButton[1].addEventListener('click', hideMenu);
-closeButton[2].addEventListener('click', hideMenu);
-closeButton[3].addEventListener('click', hideMenu);
+closeButton.forEach((btn) => btn.addEventListener('click', hideMenu));
 
 // Show menu
 
