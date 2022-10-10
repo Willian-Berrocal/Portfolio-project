@@ -11,9 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">  
 </head>
 <body>
+  <aside class="app-menu container-v menu-hide">
+    <div>
+      <button class="simple-button close-menu"><img src="images/x.png" alt="Close menu"></button>
+    </div>
+    <ul class="container-v">
+      <li><a class="close-menu" href="#Portfolio">Portfolio</a></li>
+      <li><a class="close-menu" href="#About">About</a></li>
+      <li><a class="close-menu" href="#Contact">Contact</a></li>
+    </ul>
+    <img class="last-bar" src="images/Light.svg" alt="End of page">
+  </aside>
   <header class="app-bar container-h">
     <a href="#" class="logo">My Logo</a>
-    <button class="simple-button"><img src="images/Union.svg" alt="Burger menu"></button>
+    <button class="simple-button burger-menu"><img src="images/Union.svg" alt="Burger menu"></button>
     <nav>
       <ul class="container-h">
         <li><a href="#Portfolio">Portfolio</a></li>
@@ -181,5 +192,6 @@
       <img src="images/Light.svg" alt="End of page">
     </footer>
   </div>
+  <script src="main.js"></script>
 </body>
 </html>
