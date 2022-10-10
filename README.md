@@ -10,6 +10,7 @@
 > Used Grid to make the layout of a section.
 > Implemented a new layout for desktop version
 > Added querys to make the page responsive
+> Button functionality added
 
 
 ## Built With

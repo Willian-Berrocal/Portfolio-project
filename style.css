@@ -100,6 +100,50 @@ body {
   width: 100vw;
 }
 
+/* ----------- APP-MENU ----------- */
+
+.app-menu {
+  background-color: hsla(234, 100%, 69%, 80%);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  padding: 12px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.menu-show {
+  display: flex;
+}
+
+.menu-hide {
+  display: none;
+}
+
+.app-menu div {
+  width: 40px;
+  align-self: flex-end;
+  margin-right: 12px;
+}
+
+.app-menu ul {
+  list-style: none;
+  padding: 16px;
+  gap: 32px;
+}
+
+.app-menu a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+
+.app-menu img.last-bar {
+  position: absolute;
+  bottom: 8px;
+}
+
 /* ----------- APP-BAR ----------- */
 
 .app-bar {
@@ -345,6 +389,11 @@ ul.media-links {
 }
 
 @media (768px <= width) {
+  /* ----------- DESK-APP-MENU ----------- */
+  .app-menu {
+    display: none;
+  }
+
   /* ----------- DESK-APP-BAR ----------- */
 
   .app-bar {
