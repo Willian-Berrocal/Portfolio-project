@@ -18,10 +18,13 @@ function hideMenu() {
 
 closeMenu.forEach((btn) => btn.addEventListener('click', hideMenu));
 
+// Project Data
+
 const projectData = [
   {
     name: 'Tonic',
-    desc: '1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    short: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    desc: '1 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     imgSrc: 'images/snapshots/Snapshoot-Portfolio.svg',
     techUsed: ['html', 'css', 'javascript', 'ruby'],
     liveLink: 'https://www.javascripttutorial.net/javascript-dom/javascript-createelement/',
@@ -29,7 +32,8 @@ const projectData = [
   },
   {
     name: 'Multi-Post Stories',
-    desc: '2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    short: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    desc: '2 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     imgSrc: 'images/snapshots/Snapshoot-Portfolio-1.svg',
     techUsed: ['html', 'css', 'javascript', 'github'],
     liveLink: '#',
@@ -37,7 +41,8 @@ const projectData = [
   },
   {
     name: 'Tonic',
-    desc: '3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    short: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    desc: '3 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     imgSrc: 'images/snapshots/Snapshoot-Portfolio-2.svg',
     techUsed: ['html', 'bootstrap'],
     liveLink: '#',
@@ -45,13 +50,52 @@ const projectData = [
   },
   {
     name: 'Multi-Post Stories',
-    desc: '4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    short: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+    desc: '4 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
     imgSrc: 'images/snapshots/Snapshoot-Portfolio-3.svg',
     techUsed: ['html', 'css', 'javascript'],
     liveLink: '#',
     sourceLink: '#',
   },
 ];
+
+// Filling data in cards
+
+document.querySelector('.card-name-1').textContent = projectData[0].name;
+document.querySelector('.card-short-1').textContent = projectData[0].short;
+document.querySelector('.card-img-1').src = projectData[0].imgSrc;
+for (let i = 0; i < projectData[0].techUsed.length; i += 1) {
+  const newLi = document.createElement('li');
+  newLi.textContent = projectData[0].techUsed[i];
+  document.querySelector('.card-tech-1').appendChild(newLi);
+}
+
+document.querySelector('.card-name-2').textContent = projectData[1].name;
+document.querySelector('.card-short-2').textContent = projectData[1].short;
+document.querySelector('.card-img-2').src = projectData[1].imgSrc;
+for (let i = 0; i < projectData[1].techUsed.length; i += 1) {
+  const newLi = document.createElement('li');
+  newLi.textContent = projectData[1].techUsed[i];
+  document.querySelector('.card-tech-2').appendChild(newLi);
+}
+
+document.querySelector('.card-name-3').textContent = projectData[2].name;
+document.querySelector('.card-short-3').textContent = projectData[2].short;
+document.querySelector('.card-img-3').src = projectData[2].imgSrc;
+for (let i = 0; i < projectData[2].techUsed.length; i += 1) {
+  const newLi = document.createElement('li');
+  newLi.textContent = projectData[2].techUsed[i];
+  document.querySelector('.card-tech-3').appendChild(newLi);
+}
+
+document.querySelector('.card-name-4').textContent = projectData[3].name;
+document.querySelector('.card-short-4').textContent = projectData[3].short;
+document.querySelector('.card-img-4').src = projectData[3].imgSrc;
+for (let i = 0; i < projectData[3].techUsed.length; i += 1) {
+  const newLi = document.createElement('li');
+  newLi.textContent = projectData[3].techUsed[i];
+  document.querySelector('.card-tech-4').appendChild(newLi);
+}
 
 // Show details
 
@@ -77,11 +121,6 @@ function showDetails(e) {
     newLi.textContent = projectData[e.currentTarget.numpro].techUsed[i];
     techList.appendChild(newLi);
   }
-  // for (const tech of projectData[e.currentTarget.numpro].techUsed) {
-  //   const newLi = document.createElement('li');
-  //   newLi.textContent = tech;
-  //   document.querySelector('.details-tech').appendChild(newLi);
-  // }
   document.querySelector('.details-liveLink').href = projectData[e.currentTarget.numpro].liveLink;
   document.querySelector('.details-sourceLink').href = projectData[e.currentTarget.numpro].sourceLink;
 }
