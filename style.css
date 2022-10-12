@@ -92,6 +92,14 @@
   font-family: var(--main-font);
 }
 
+.section-show {
+  display: flex;
+}
+
+.section-hide {
+  display: none;
+}
+
 /* ----------- BODY ----------- */
 
 body {
@@ -105,18 +113,11 @@ body {
 .app-menu {
   background-color: hsla(234, 100%, 69%, 80%);
   backdrop-filter: blur(8px);
+  align-items: center;
   position: fixed;
   padding: 12px;
   height: 100vh;
   width: 100vw;
-}
-
-.menu-show {
-  display: flex;
-}
-
-.menu-hide {
-  display: none;
 }
 
 .app-menu div {
@@ -126,6 +127,7 @@ body {
 }
 
 .app-menu ul {
+  width: 100%;
   list-style: none;
   padding: 16px;
   gap: 32px;
@@ -139,7 +141,7 @@ body {
   color: #fff;
 }
 
-.app-menu img.last-bar {
+.last-bar {
   position: absolute;
   bottom: 8px;
 }
@@ -204,14 +206,30 @@ ul.media-links {
   align-items: center;
 }
 
+/* ----------- APP-DETAILS ----------- */
+
+.app-details {
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  position: fixed;
+  align-items: center;
+  top: 0;
+  padding: 50px 16px;
+  height: 100vh;
+  width: 100vw;
+}
+
 /* ----------- APP-WORKS ----------- */
 
 .app-works {
   padding: 15.9vh var(--left-right-padding);
+  justify-content: center;
+}
+
+.works-grid {
   display: grid;
   grid-template-rows: auto auto auto auto;
   row-gap: 12.2vh;
-  justify-content: center;
 }
 
 .app-works .project-card {
