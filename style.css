@@ -219,10 +219,15 @@ ul.media-links {
   width: 100vw;
 }
 
+.app-details .project-card {
+  max-height: 95vh;
+}
+
 .app-details .desc-aux {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow: scroll;
 }
 
 .app-details .title-aux {
