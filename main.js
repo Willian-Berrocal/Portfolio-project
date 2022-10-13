@@ -146,3 +146,6 @@ function hideDetails() {
 }
 
 closeDetails.addEventListener('click', hideDetails);
+
+const myForm = document.querySelector('.contact-form');
+const emailInput = document.querySelector('#form-email');

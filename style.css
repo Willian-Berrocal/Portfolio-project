@@ -111,6 +111,7 @@ body {
 /* ----------- APP-MENU ----------- */
 
 .app-menu {
+  z-index: 1;
   background-color: hsla(234, 100%, 69%, 80%);
   backdrop-filter: blur(8px);
   align-items: center;
@@ -209,6 +210,7 @@ ul.media-links {
 /* ----------- APP-DETAILS ----------- */
 
 .app-details {
+  z-index: 1;
   background-color: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(8px);
   position: fixed;
@@ -220,14 +222,14 @@ ul.media-links {
 }
 
 .app-details .project-card {
-  max-height: 95vh;
+  min-height: 90vh;
+  overflow: scroll;
 }
 
 .app-details .desc-aux {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  overflow: scroll;
 }
 
 .app-details .title-aux {
@@ -451,6 +453,13 @@ section.app-works .project-card button {
   padding: 12px 16px;
 }
 
+.app-contact .error-msg {
+  background-color: crimson;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px;
+}
+
 /* ----------- ----------- DESKTOP-VERSION ----------- ----------- */
 
 @media (768px <= width) {
@@ -490,8 +499,6 @@ section.app-works .project-card button {
   /* ----------- DESK-APP-DETAILS ----------- */
 
   .app-details .project-card {
-    min-height: 90vh;
-    overflow: scroll;
     padding: 24px;
   }
 
@@ -507,6 +514,10 @@ section.app-works .project-card button {
 
   .app-details .details-desc {
     width: 50%;
+  }
+
+  .app-details .last-bar {
+    display: none;
   }
 
   /* ----------- DESK-APP-WORKS ----------- */
