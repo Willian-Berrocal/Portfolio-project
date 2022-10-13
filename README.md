@@ -11,12 +11,15 @@
 > Implemented a new layout for desktop version
 > Added querys to make the page responsive
 > Button functionality added
+> See project button functionality added
+> Details modal window created for both mobile and desktop
 
 
 ## Built With
 
 - HTML
 - CSS
+- JavaScript
 
 
 ## Getting Started
