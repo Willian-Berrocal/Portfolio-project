@@ -146,3 +146,28 @@ function hideDetails() {
 }
 
 closeDetails.addEventListener('click', hideDetails);
+
+// Form validation
+
+const myForm = document.querySelector('.contact-form');
+const emailInput = document.querySelector('#form-email');
+const errorMsg = document.querySelector('.error-msg');
+
+function parseLowerCase(str) {
+  for (let i = 0; i < str.length; i += 1) {
+    if (str[i] >= 'A' && str[i] <= 'Z') {
+      return false;
+    }
+  }
+  return true;
+}
+
+function onSubmit(e) {
+  if (!parseLowerCase(emailInput.value)) {
+    e.preventDefault();
+    errorMsg.classList.replace('section-hide', 'section-show');
+    setTimeout(() => errorMsg.classList.replace('section-show', 'section-hide'), 5000);
+  }
+}
+
+myForm.addEventListener('submit', onSubmit);

@@ -191,13 +191,14 @@
     <footer class="app-contact container-v" id="Contact">
       <h2>Contact me</h2>
       <p>If you have an application you are interested in developing, a feature that you need built or a project that needs coding. I’d love to help with it </p>
-      <form action="https://formspree.io/f/xaykokzn" method="post" class="container-v">
+      <form action="https://formspree.io/f/xaykokzn" method="post" class="container-v contact-form">
         <label for="form-name">Name:</label>
         <input class="simple-input" type="text" name="Name" maxlength="30" placeholder="Name" required id="form-name">
         <label for="form-email">Email:</label>
         <input class="simple-input" type="email" name="Email" placeholder="Email" required id="form-email">
         <label for="form-message">Message:</label>
         <textarea class="simple-input" name="Message" maxlength="500" placeholder="Write your message here" rows="5" required id="form-message"></textarea>
+        <span class="error-msg section-hide">Please enter you email in all lower case</span>
         <button class="complex-button contact-button" type="submit">Get In Touch</button>
       </form>
       <img src="images/Light.svg" alt="End of page">
