@@ -180,19 +180,18 @@ const msgInput = document.querySelector('#form-message');
 let data = JSON.parse(localStorage.getItem('formData'));
 
 if (data !== null) {
-	nameInput.value = data.name;
-	emailInput.value = data.email;
-	msgInput.value = data.msg;
+  nameInput.value = data.name;
+  emailInput.value = data.email;
+  msgInput.value = data.msg;
 } else {
   data = {
     name: '',
     email: '',
-    msg: ''
-  }
+    msg: '',
+  };
 }
 
 function onInput(e) {
-  console.log(e.currentTarget.dataKey);
   data[e.currentTarget.dataKey] = e.currentTarget.value;
   localStorage.setItem('formData', JSON.stringify(data));
 }
