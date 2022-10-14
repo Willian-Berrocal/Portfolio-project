@@ -125,17 +125,17 @@ function showDetails(e) {
   document.querySelector('.details-sourceLink').href = projectData[e.currentTarget.numpro].sourceLink;
 }
 
-detailsButton1.addEventListener('click', showDetails);
 detailsButton1.numpro = 0;
+detailsButton1.addEventListener('click', showDetails);
 
-detailsButton2.addEventListener('click', showDetails);
 detailsButton2.numpro = 1;
+detailsButton2.addEventListener('click', showDetails);
 
-detailsButton3.addEventListener('click', showDetails);
 detailsButton3.numpro = 2;
+detailsButton3.addEventListener('click', showDetails);
 
-detailsButton4.addEventListener('click', showDetails);
 detailsButton4.numpro = 3;
+detailsButton4.addEventListener('click', showDetails);
 
 // Hide details
 
@@ -171,3 +171,36 @@ function onSubmit(e) {
 }
 
 myForm.addEventListener('submit', onSubmit);
+
+// Store data locally
+
+const nameInput = document.querySelector('#form-name');
+const msgInput = document.querySelector('#form-message');
+
+let data = JSON.parse(localStorage.getItem('formData'));
+
+if (data !== null) {
+  nameInput.value = data.name;
+  emailInput.value = data.email;
+  msgInput.value = data.msg;
+} else {
+  data = {
+    name: '',
+    email: '',
+    msg: '',
+  };
+}
+
+function onInput(e) {
+  data[e.currentTarget.dataKey] = e.currentTarget.value;
+  localStorage.setItem('formData', JSON.stringify(data));
+}
+
+nameInput.dataKey = 'name';
+nameInput.addEventListener('input', onInput);
+
+emailInput.dataKey = 'email';
+emailInput.addEventListener('input', onInput);
+
+msgInput.dataKey = 'msg';
+msgInput.addEventListener('input', onInput);
