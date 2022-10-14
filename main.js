@@ -142,7 +142,7 @@ detailsButton4.addEventListener('click', showDetails);
 const closeDetails = document.querySelector('.close-details');
 
 function hideDetails() {
-  document.querySelector('.app-details').classList.replace('section-show', 'section-hide');
+  document.querySelector('.app-details').classList.replace('section-shw', 'section-hide');
 }
 
 closeDetails.addEventListener('click', hideDetails);
