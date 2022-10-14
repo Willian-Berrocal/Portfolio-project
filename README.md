@@ -13,6 +13,8 @@
 > Button functionality added
 > See project button functionality added
 > Details modal window created for both mobile and desktop
+> Implemented email validation (lowercase)
+> Important data stored locally (form)
 
 
 ## Built With
